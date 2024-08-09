@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Workouts</th>
+      <th>Number of Workouts</th>
+      <th>Total Workout Minutes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let workout of filteredWorkouts">
+      <td>{{ workout.name }}</td>
+      <td>{{ workout.type }}</td>
+      <td>{{ workoutService.getWorkoutCount(workout.name) }}</td>
+      <td>{{ workoutService.getTotalMinutes(workout.name) }}</td>
+    </tr>
+  </tbody>
+</table>

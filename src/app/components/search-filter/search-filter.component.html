@@ -1,0 +1,11 @@
+<div>
+  <input type="text" (input)="onSearchInput($event)" placeholder="Search..." />
+
+  <select [(ngModel)]="filterType" (change)="onFilterChange($event)">
+    <option value="All">All</option>
+    <option value="Running">Running</option>
+    <option value="Cycling">Cycling</option>
+    <option value="Swimming">Swimming</option>
+    <option value="Yoga">Yoga</option>
+  </select>
+</div>
